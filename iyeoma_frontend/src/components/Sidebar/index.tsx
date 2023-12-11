@@ -1,5 +1,5 @@
 import { Flex, Link as ChakraLink, Box, Icon } from "@chakra-ui/react";
-import { IoPerson,} from "react-icons/io5";
+// import { IoPerson,} from "react-icons/io5";
 import { SlSettings } from "react-icons/sl";
 // import Logo from "../../images/Logo.png";
 import "typeface-karla";
@@ -7,7 +7,7 @@ import { CSSProperties, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import dashboard from "../../images/dashboard.svg";
 // import activity from "../../images/activity.svg";
-import { FaBook, } from "react-icons/fa6";
+// import { FaBook, } from "react-icons/fa6";
 
 const Sidebar = () => {
     const { linkStyle, _activeLink } = useStyles();
@@ -26,7 +26,7 @@ const Sidebar = () => {
             boxShadow={"md"}
             align={"left"}
             h={"100vh"}
-            w={"250px"}
+            w={"210px"}
             bg={"#390048"}
             py={"70px"}
         >
@@ -52,7 +52,7 @@ const Sidebar = () => {
                         fontSize="26px"
                         fontWeight={700}
                     >
-                        Iyeoma
+                        IyeWallet
                     </Box>
                 </Box>
             </ChakraLink>
@@ -69,17 +69,17 @@ const Sidebar = () => {
                     alignItems={"center"}
                     to={"/dashboard"}
                     px={"20px"}
-                    _hover={{ borderInline: "5px solid #050F28", boxShadow: "md", transition: "0.2s ease-in-out" }}
-                    style={activeLink === "/profile" ? _activeLink : linkStyle}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    style={activeLink === "/dashboard" ? _activeLink : linkStyle}
                 >
-                        <Icon
+                        {/* <Icon
                             as={IoPerson}
                             mr={"20px"}
                             w={"18px"}
                             h={"18px"}
 
-                        />
-                        Profile
+                        /> */}
+                       Dashboard
                 </ChakraLink>
                 <ChakraLink
                     as={Link}
@@ -87,10 +87,10 @@ const Sidebar = () => {
                     flexDir={"row"}
                     justifyItems={"left"}
                     alignItems={"center"}
-                    to={"/dashboard"}
+                    to={"/savings"}
                     px={"20px"}
-                    _hover={{ borderInline: "5px solid #050F28", boxShadow: "md", transition: "0.2s ease-in-out" }}
-                    style={activeLink === "/dashboard" ? _activeLink : linkStyle}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    style={activeLink === "/savings" ? _activeLink : linkStyle}
                 >
                         {/* <Icon
                             as={Image}
@@ -99,7 +99,7 @@ const Sidebar = () => {
                             w={"18px"}
                             h={"18px"}
                         /> */}
-                        Dashboard
+                        Savings
                 </ChakraLink>
                 <ChakraLink
                     as={Link}
@@ -107,10 +107,10 @@ const Sidebar = () => {
                     flexDir={"row"}
                     justifyItems={"left"}
                     alignItems={"center"}
-                    to={"/activity"}
+                    to={"/invest"}
                     pl={"20px"}
-                    _hover={{ borderInline: "5px solid #050F28", boxShadow: "md", transition: "0.2s ease-in-out" }}
-                    style={activeLink === "/activity" ? _activeLink : linkStyle}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    style={activeLink === "/invest" ? _activeLink : linkStyle}
                 >
                         {/* <Icon
                             as={Image}
@@ -119,7 +119,7 @@ const Sidebar = () => {
                             w={"20px"}
                             h={"20px"}
                         /> */}
-                        Activity
+                        Invest
                 </ChakraLink>
                 <ChakraLink
                     as={Link}
@@ -128,18 +128,38 @@ const Sidebar = () => {
                     flexDir={"row"}
                     justifyItems={"left"}
                     alignItems={"center"}
-                    to={"/afrilearn"}
+                    to={"/my-account"}
                     pl={"20px"}
-                    _hover={{ borderInline: "5px solid #050F28", boxShadow: "md", transition: "0.2s ease-in-out" }}
-                    style={activeLink === "/afrilearn" ? _activeLink : linkStyle}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    style={activeLink === "/my-account" ? _activeLink : linkStyle}
                 >
-                        <Icon
+                        {/* <Icon
                             as={FaBook}
                             mr={"20px"}
                             w={"20px"}
                             h={"20px"}
-                        />
-                        Afrilearn
+                        /> */}
+                        Account
+                </ChakraLink>
+                <ChakraLink
+                    as={Link}
+                    w={"100%"}
+                    display={"flex"}
+                    flexDir={"row"}
+                    justifyItems={"left"}
+                    alignItems={"center"}
+                    to={"/info-hub"}
+                    pl={"20px"}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    style={activeLink === "/info-hub" ? _activeLink : linkStyle}
+                >
+                        {/* <Icon
+                            as={FaBook}
+                            mr={"20px"}
+                            w={"20px"}
+                            h={"20px"}
+                        /> */}
+                        Info Hub
                 </ChakraLink>
             </Flex>
             <Flex
@@ -154,7 +174,7 @@ const Sidebar = () => {
                     alignItems={"center"}
                     to={"/dashboard"}
                     px={"20px"}
-                    _hover={{ borderInline: "5px solid #050F28", boxShadow: "md", transition: "0.2s ease-in-out" }}
+                    _hover={{ borderInline: "5px solid #B6FAFF", boxShadow: "md", transition: "0.2s ease-in-out" }}
                     style={activeLink === "/settings" ? _activeLink : linkStyle}
                 >
                         <Icon
@@ -194,7 +214,7 @@ const useStyles = () => {
     return {
         linkStyle: {
             color: "#ecf",
-            fontSize: "20px",
+            fontSize: "17px",
             fontWeight: 500,
             fontFamily: "Karla",
             lineHeight: "50px",
@@ -202,13 +222,13 @@ const useStyles = () => {
         } as CSSProperties,
         _activeLink: {
             color: "#ecf",
-            fontSize: "20px",
+            fontSize: "17px",
             fontWeight: 500,
             boxShadow: "md",
             fontFamily: "Karla",
             lineHeight: "50px",
             textAlign: "center",
-            borderInline: "5px solid #050F28",
+            borderInlineEnd: "5px solid #B6FAFF",
         } as CSSProperties,
     };
 };
