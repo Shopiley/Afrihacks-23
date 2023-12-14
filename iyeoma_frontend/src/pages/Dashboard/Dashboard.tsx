@@ -8,8 +8,11 @@ import bgPattern from "../../assets/Images/bg-pattern-8efb1209.png";
 import save from "../../assets/Icons/fi-rr-credit-card.svg";
 import transactions from "../../constants/transactionData";
 import hubData from "../../constants/infoHubData";
-import profileBg from "../../assets/Images/bg-profile.png";
+// import profileBg from "../../assets/Images/bg-profile.png";
 import loan from "../../assets/Icons/fi-rr-hand-holding-heart.svg";
+import { FaRegUserCircle } from "react-icons/fa";
+import invest from "../../assets/Icons/fi-rr-hand-holding-seeding.svg";
+import medical from "../../assets/Icons/fi-rr-hand-holding-medical.svg";
 
 interface TransactionDataProps {
     id: number;
@@ -28,7 +31,7 @@ const Dashboard = () => {
             w={"100vw"}
         >
             {/* <Box> */}
-                <Sidebar />
+            <Sidebar />
             {/* </Box> */}
             <Box
                 w={"85.9%"}
@@ -88,9 +91,10 @@ const Dashboard = () => {
                     </Box>
                 </Flex>
                 <Flex
+                mt={"20px"}
                     flexDir={"row"}
-                    gap={"50px"}
-                    // justify={"space-between"}
+                    // gap={"50px"}
+                    justify={"space-evenly"}
                     align={"center"}
                     mb={"20px"}
                 >
@@ -126,7 +130,7 @@ const Dashboard = () => {
                                 Total Savings
                             </Text>
                             <Text color={"#ffffff"} fontSize={"24px"} fontWeight={700}>
-                                ₦ 50,000.40
+                                ₦ 500,000.00
                             </Text>
                         </Box>
                     </Box>
@@ -134,88 +138,150 @@ const Dashboard = () => {
                         w={"272px"}
                         h={"150px"}
                         display={"flex"}
-                        flexDir={"row"}
-                        p={"30px"}
+                        flexDir={"column"}
+                        p={"35px"}
                         bgColor={"#EFB6FF"}
-                        // bgRepeat={"no-repeat"}
                         borderRadius={"10px"}
                         bgImage={bgPattern}
-                        // bgSize={"contain"}
-                        alignItems={"center"}
                         cursor={"pointer"}
                         onClick={() => (navigate('/savings'))}
                         _hover={{ boxShadow: "2px 2px 10px #414141", transition: "0.5s ease-in-out"/*-2px -2px 10px #00afbb"*/ }}
-                        justifyContent={"center"}
                     >
                         <Box
                             display={"flex"}
                             flexDir={"column"}
                             justifyContent={"center"}
                         >
-                            {/* <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text> */}
-                            <Text color={"#000000"} fontSize={"24px"} fontWeight={700}>
-                               Abba
+                            <Text color={"#414141"} mb={"8px"} fontSize={"24px"} fontWeight={700}>
+                                ₦ 35,000.00
                             </Text>
+                            <Flex>
+                                <Box
+                                    mt={"25px"}
+                                    w={"100%"}
+                                    h={"90px"}
+                                    borderRadius={"5px"}
+                                >
+                                    <Progress borderRadius={"8px"} w={"60%"} colorScheme={"purple"} bg={"#ffffff"} value={25} size={"sm"}> <ProgressLabel fontSize={"10px"}>25%</ProgressLabel></Progress>
+                                    <Flex
+                                        flexDir={"column"}
+                                        mt={"-65px"}
+                                        ml={"80%"}
+                                        justify={"center"}
+                                        align={"center"}
+                                        fontWeight={500}
+                                        color={"#414141"}
+                                    >
+                                        <Icon
+                                            as={FaRegUserCircle}
+                                            w={"48px"}
+                                            h={"48px"}
+                                            color={"#414141"}
+                                        />
+                                        Abba
+                                    </Flex>
+                                </Box>
+                            </Flex>
                         </Box>
                     </Box>
                     <Box
                         w={"272px"}
                         h={"150px"}
                         display={"flex"}
-                        flexDir={"row"}
-                        p={"30px"}
+                        flexDir={"column"}
+                        p={"35px"}
                         bgColor={"#EFB6FF"}
                         borderRadius={"10px"}
                         bgImage={bgPattern}
-                        // bgSize={"contain"}
-                        alignItems={"center"}
                         cursor={"pointer"}
                         onClick={() => (navigate('/savings'))}
                         _hover={{ boxShadow: "2px 2px 10px #414141", transition: "0.5s ease-in-out"/*-2px -2px 10px #00afbb"*/ }}
-                        justifyContent={"center"}
                     >
                         <Box
                             display={"flex"}
                             flexDir={"column"}
                             justifyContent={"center"}
                         >
-                            {/* <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text> */}
-                            <Text color={"#000000"} fontSize={"24px"} fontWeight={700}>
-                              Sope
+                            <Text color={"#414141"} mb={"8px"} fontSize={"24px"} fontWeight={700}>
+                                ₦ 235,000.00
                             </Text>
+                            <Flex>
+                                <Box
+                                    mt={"25px"}
+                                    w={"100%"}
+                                    h={"90px"}
+                                    borderRadius={"5px"}
+                                >
+                                    <Progress borderRadius={"8px"} w={"60%"} colorScheme={"purple"} bg={"#ffffff"} value={88} size={"sm"}> <ProgressLabel fontSize={"10px"}></ProgressLabel></Progress>
+                                    <Flex
+                                        flexDir={"column"}
+                                        mt={"-65px"}
+                                        ml={"80%"}
+                                        justify={"center"}
+                                        align={"center"}
+                                        fontWeight={500}
+                                        color={"#414141"}
+                                    >
+                                        <Icon
+                                            as={FaRegUserCircle}
+                                            w={"48px"}
+                                            h={"48px"}
+                                            color={"#414141"}
+                                        />
+                                        Tete
+                                    </Flex>
+                                </Box>
+                            </Flex>
                         </Box>
                     </Box>
                     <Box
                         w={"272px"}
                         h={"150px"}
                         display={"flex"}
-                        flexDir={"row"}
-                        p={"30px"}
+                        flexDir={"column"}
+                        p={"35px"}
                         bgColor={"#EFB6FF"}
                         borderRadius={"10px"}
                         bgImage={bgPattern}
-                        // bgSize={"contain"}
-                        alignItems={"center"}
                         cursor={"pointer"}
                         onClick={() => (navigate('/savings'))}
                         _hover={{ boxShadow: "2px 2px 10px #414141", transition: "0.5s ease-in-out"/*-2px -2px 10px #00afbb"*/ }}
-                        justifyContent={"center"}
                     >
                         <Box
                             display={"flex"}
                             flexDir={"column"}
                             justifyContent={"center"}
                         >
-                            {/* <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text> */}
-                            <Text color={"#000000"} fontSize={"24px"} fontWeight={700}>
-                                Baby 👶🏾
+                            <Text color={"#414141"} mb={"8px"} fontSize={"24px"} fontWeight={700}>
+                                ₦ 155,000.00
                             </Text>
+                            <Flex>
+                                <Box
+                                    mt={"25px"}
+                                    w={"100%"}
+                                    h={"90px"}
+                                    borderRadius={"5px"}
+                                >
+                                    <Progress borderRadius={"8px"} w={"60%"} colorScheme={"purple"} bg={"#ffffff"} value={78} size={"sm"}> <ProgressLabel fontSize={"10px"}></ProgressLabel></Progress>
+                                    <Flex
+                                        flexDir={"column"}
+                                        mt={"-65px"}
+                                        ml={"80%"}
+                                        justify={"center"}
+                                        align={"center"}
+                                        fontWeight={500}
+                                        color={"#414141"}
+                                    >
+                                        <Icon
+                                            as={FaRegUserCircle}
+                                            w={"48px"}
+                                            h={"48px"}
+                                            color={"#414141"}
+                                        />
+                                        Sope
+                                    </Flex>
+                                </Box>
+                            </Flex>
                         </Box>
                     </Box>
                 </Flex>
@@ -267,8 +333,8 @@ const Dashboard = () => {
                 </Flex>
                 <Flex
                     flexDir={"row"}
-                    gap={"50px"}
-                    // justify={"space-between"}
+                    // gap={"100px"}
+                    justify={"space-evenly"}
                     align={"center"}
                     mb={"20px"}
                 >
@@ -322,7 +388,7 @@ const Dashboard = () => {
                     >
                         <Icon
                             as={Image}
-                            src={save}
+                            src={invest}
                             w={"30px"}
                             h={"30px"}
                             mr={"20px"}
@@ -332,11 +398,11 @@ const Dashboard = () => {
                             flexDir={"column"}
                             justifyContent={"center"}
                         >
-                            <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text>
                             <Text color={"#ffffff"} fontSize={"24px"} fontWeight={700}>
-                                ₦ 50,000.40
+                                Investments
+                            </Text>
+                            <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
+                            Take a Loan from us or one of our partners
                             </Text>
                         </Box>
                     </Box>
@@ -356,7 +422,7 @@ const Dashboard = () => {
                     >
                         <Icon
                             as={Image}
-                            src={save}
+                            src={medical}
                             w={"30px"}
                             h={"30px"}
                             mr={"20px"}
@@ -366,46 +432,12 @@ const Dashboard = () => {
                             flexDir={"column"}
                             justifyContent={"center"}
                         >
-                            <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text>
                             <Text color={"#ffffff"} fontSize={"24px"} fontWeight={700}>
-                                ₦ 50,000.40
+                                Medical Centres
                             </Text>
-                        </Box>
-                    </Box>
-                    <Box
-                        w={"272px"}
-                        h={"150px"}
-                        display={"flex"}
-                        flexDir={"row"}
-                        p={"30px"}
-                        bgColor={"#00AAB6"}
-                        borderRadius={"10px"}
-                        bgImage={bgPattern}
-                        alignItems={"center"}
-                        cursor={"pointer"}
-                        onClick={() => (navigate('/savings'))}
-                        _hover={{ boxShadow: "2px 2px 10px #414141", transition: "0.5s ease-in-out"/*-2px -2px 10px #00afbb"*/ }}
-                    >
-                        <Icon
-                            as={Image}
-                            src={save}
-                            w={"30px"}
-                            h={"30px"}
-                            mr={"20px"}
-                        />
-                        <Box
-                            display={"flex"}
-                            flexDir={"column"}
-                            justifyContent={"center"}
-                        >
-                            <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
-                                Total Savings
-                            </Text>
-                            <Text color={"#ffffff"} fontSize={"24px"} fontWeight={700}>
-                                ₦ 50,000.40
-                            </Text>
+                            {/* <Text color={"#E2E8F0"} fontSize={"14px"} fontWeight={700}>
+                            Take a Loan from us or one of our partners
+                            </Text> */}
                         </Box>
                     </Box>
                 </Flex>
@@ -445,8 +477,8 @@ const Dashboard = () => {
                             mb={"8px"}
                         >
                             <Text>{hubData.name}</Text>
-                            <Text>{hubData.description}</Text>
-                            <Link style={{cursor: "pointer"}}>See More</Link>
+                            {/* <Text>{hubData.description}</Text> */}
+                            <Link style={{ cursor: "pointer" }} to={"/info-hub"}>See More</Link>
                         </Flex>
                     ))}
                 </Flex>
